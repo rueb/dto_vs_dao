@@ -5,7 +5,10 @@ public class UserDTO {
 	private Integer id;
 	private String name;
 	private String lastName;
+	private String email;	
 	private byte age;
+	
+	
 	public Integer getId() {
 		return id;
 	}
@@ -29,6 +32,12 @@ public class UserDTO {
 	}
 	public void setAge(byte age) {
 		this.age = age;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	

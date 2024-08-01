@@ -1,0 +1,6 @@
+com\demo\controller\UserController.class
+com\demo\entity\User.class
+service\interfaces\IUserService.class
+com\demo\dto\UserDTO.class
+service\implementation\UserServiceImpl.class
+com\demo\SpringDemoApplication.class

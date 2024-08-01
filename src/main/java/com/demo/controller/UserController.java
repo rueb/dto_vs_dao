@@ -27,7 +27,7 @@ public class UserController {
 
 	@PostMapping("/create")
 	public ResponseEntity<UserDTO>createUser(@RequestBody UserDTO userDTO){
-		return null;
+		return new ResponseEntity<>(this.iUserService.createUser(userDTO), HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/find")
@@ -37,21 +37,21 @@ public class UserController {
 	
   
 	@GetMapping("/find/{id}")
-	public ResponseEntity<List<UserDTO>>findAllById(){
-		return null;
+	public ResponseEntity<UserDTO>findlById(@PathVariable Integer id){
+		return new ResponseEntity<>(this.iUserService.findById(id), HttpStatus.OK);
 	}
 	
 	//Update
 	@PutMapping("/update/{id}")
-	public ResponseEntity<UserDTO>updateUser(@RequestBody UserDTO userDto,@PathVariable Integer id){
+	public ResponseEntity<UserDTO>updateUser(@RequestBody UserDTO userDTO,@PathVariable Integer id){
 		
-		return null;
+		return new ResponseEntity<>(this.iUserService.updateUser(userDTO,id), HttpStatus.CREATED);
 	
 	}
 	
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<String>deleteUser(@PathVariable Integer id){
-		return null;
+		return new ResponseEntity<>(this.iUserService.deleteUser(id),HttpStatus.NO_CONTENT);
 	}
 }
 
